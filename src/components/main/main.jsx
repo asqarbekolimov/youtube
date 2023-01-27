@@ -10,14 +10,14 @@ function Main() {
   const [videos, setVideos] = useState([])
 
   const selectCategoryHandler = (category) => setSelectCategory(category)
-  console.log(process.env.REACT_APP_PUBLIC_KEY);
+  // console.log(process.env.REACT_APP_PUBLIC_KEY);
 
   useEffect(() => {
 
     const getData = async () => {
       try {
-        const data = await ApiService.fetching('search')
-        setVideos(data)
+        const data = await ApiService.fetching(`search?part=snippet&q=${selectCategory}`)
+        setVideos(data.items)
       } catch (error) {
         console.log(error);
       }
