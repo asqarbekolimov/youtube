@@ -1,6 +1,6 @@
 import { Box, Stack } from "@mui/material";
 import React from "react";
-import { VideoCart } from "../";
+import { VideoCart } from "..";
 
 function Videos({ videos }) {
   return (
@@ -12,10 +12,8 @@ function Videos({ videos }) {
       alignItems={"center"}
       gap={2}
     >
-      {videos.map((item) => (
-        <Box key={item.id.videoId}>
-          {item.id.videoId && <VideoCart video={item} />}
-        </Box>
+      {videos.map((item, idx) => (
+        <Box key={idx}>{item.id.videoId && <VideoCart video={item} />}</Box>
       ))}
     </Stack>
   );

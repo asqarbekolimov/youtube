@@ -1,4 +1,11 @@
-import { Avatar, Card, CardContent, CardMedia, Stack, Typography } from "@mui/material";
+import {
+  Avatar,
+  Card,
+  CardContent,
+  CardMedia,
+  Stack,
+  Typography,
+} from "@mui/material";
 import React from "react";
 import { colors } from "../../constants/colors";
 import moment from "moment";
@@ -31,11 +38,19 @@ function VideoCart({ video }) {
           </Typography>
         </>
         <>
-          <Stack direction={'row'} position={'absolute'} bottom={'10px'} alignItems={'center'} gap={'5px'}>
+          <Stack
+            direction={"row"}
+            position={"absolute"}
+            bottom={"10px"}
+            alignItems={"center"}
+            gap={"5px"}
+          >
             <Avatar src={video?.snippet?.thumbnails?.high?.url} />
-            <Typography variant={'subtitle2'} color={'gray'}>
+            <Typography variant={"subtitle2"} color={"gray"}>
               {video?.snippet?.channelTitle}
-              <CheckCircle sx={{ fontSize: '12px', color: 'gray', ml: '5px' }} />
+              <CheckCircle
+                sx={{ fontSize: "12px", color: "gray", ml: "5px" }}
+              />
             </Typography>
           </Stack>
         </>
