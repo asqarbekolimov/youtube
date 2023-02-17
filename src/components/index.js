@@ -8,3 +8,4 @@ export { default as SearchBar } from "./searchBar/searchBar";
 export { default as Category } from "./category/category";
 export { default as Videos } from "./videos/videos";
 export { default as VideoCart } from "./video-cart/video-cart";
+export { default as Loader } from "./loader/loader";

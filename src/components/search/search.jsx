@@ -26,7 +26,7 @@ function Search() {
     <Box p={2} sx={{ height: "90vh" }}>
       <Container maxWidth={"90%"}>
         <Typography variant={"h4"} fontWeight={"bold"} mb={2}>
-          Search results fro{" "}
+          Search results for{" "}
           <span style={{ color: colors.secondary }}>{id}</span> videos
         </Typography>
         <Videos videos={videos} />

@@ -1,8 +1,9 @@
 import { Box, Stack } from "@mui/material";
 import React from "react";
-import { VideoCart } from "..";
+import { Loader, VideoCart } from "..";
 
 function Videos({ videos }) {
+  if (!videos.length) return <Loader />;
   return (
     <Stack
       width={"100%"}
