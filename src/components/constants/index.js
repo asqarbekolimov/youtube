@@ -1,0 +1,15 @@
+export const category = [
+  { name: "New" },
+  { name: "Movie" },
+  { name: "Live" },
+  { name: "Gaming" },
+  { name: "Education" },
+  { name: "Sport" },
+  { name: "Comedy" },
+  { name: "Podcast" },
+  { name: "Fashion" },
+  { name: "Crypto" },
+  { name: "Gym" },
+  { name: "Beauty" },
+  { name: "Music" },
+];
