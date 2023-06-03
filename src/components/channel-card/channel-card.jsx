@@ -3,9 +3,10 @@ import { MdVerified } from "react-icons/md";
 
 const ChannelCard = ({ video }) => {
   return (
-    <div className="flex justify-center items-center w-[356] h-[326px] rounded-[28px] m-auto">
-      <div className="flex justify-center items-center text-center">
+    <div className="w-full sm:w-[360px] md:w-[320px] shadow-sm shadow-indigo-100 flex justify-center items-center  h-[326px]  m-auto">
+      <div className="flex justify-center flex-col items-center text-center">
         <img
+          className="rounded-full"
           src={video?.snippet?.thumbnails?.default?.url}
           alt={video?.snippet?.title}
         />

@@ -5,7 +5,7 @@ import { MdVerified } from "react-icons/md";
 const VideoCart = ({ video }) => {
   console.log(video);
   return (
-    <div className="w-[320px] block rounded-lg p-4 shadow-sm shadow-indigo-100 text-black">
+    <div className="w-full sm:w-[360px] md:w-[320px] block rounded-lg p-4 shadow-sm shadow-indigo-100 text-black">
       <img src={video?.snippet?.thumbnails?.high?.url} alt="" />
       <div className="relative">
         <>

@@ -10,3 +10,4 @@ export { default as Category } from "./category/category";
 export { default as Videos } from "./videos/videos";
 export { default as VideoCart } from "./video-cart/video-cart";
 export { default as ChannelCard } from "./channel-card/channel-card";
+export { default as Loader } from "./loader/loader";
