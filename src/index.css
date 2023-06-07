@@ -14,3 +14,18 @@
 ::-webkit-scrollbar-track {
   background-color: transparent;
 }
+.react-player {
+  @apply !w-full !h-[45vh] md:!h-[77vh];
+}
+h1 {
+  @apply text-2xl;
+}
+h2 {
+  @apply text-xl;
+}
+h3 {
+  @apply text-lg;
+}
+p {
+  @apply text-base font-medium;
+}
