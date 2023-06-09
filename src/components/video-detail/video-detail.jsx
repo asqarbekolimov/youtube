@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { ApiService } from "../../service/api.service";
 import ReactPlayer from "react-player";
 import { GrView } from "react-icons/gr";
@@ -35,7 +35,6 @@ const VideoDetail = () => {
   //   snippet: { title, channel, channelTitle, description, tags, thumbnails },
   //   statistics: { videoCount, likeCount, commentCount },
   // } = videoDetail;
-  console.log(videoDetail?.snippet);
   return (
     <div className="min-h-[90vh] mb-10">
       <div className="flex flex-col md:flex-row">
@@ -47,7 +46,11 @@ const VideoDetail = () => {
           />
 
           <div className="flex items-center mt-3">
-            <h2 className="font-bold">{videoDetail?.snippet?.channelTitle}</h2>
+            <Link to={`/channel/${videoDetail?.snippet?.channelId}`}>
+              <h2 className="font-bold">
+                {videoDetail?.snippet?.channelTitle}
+              </h2>
+            </Link>
             <div className="flex items-center gap-3 ml-5">
               <div className="flex items-center gap-1">
                 <GrView />

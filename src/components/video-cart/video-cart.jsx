@@ -21,16 +21,18 @@ const VideoCart = ({ video }) => {
           </Link>
         </>
         <>
-          <div className="flex flex-row mt-2 items-center gap-[5px]">
-            <img
-              className="w-12 h-12 rounded-full"
-              src={video?.snippet?.thumbnails?.high?.url}
-              alt=""
-            />
-            <p className="flex items-center gap-1">
-              {video?.snippet?.channelTitle} <MdVerified />
-            </p>
-          </div>
+          <Link to={`/channel/${video?.snippet?.channelId}`}>
+            <div className="flex flex-row mt-2 items-center gap-[5px]">
+              <img
+                className="w-12 h-12 rounded-full"
+                src={video?.snippet?.thumbnails?.high?.url}
+                alt=""
+              />
+              <p className="flex items-center gap-1">
+                {video?.snippet?.channelTitle} <MdVerified />
+              </p>
+            </div>
+          </Link>
         </>
       </div>
     </div>
