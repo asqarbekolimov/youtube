@@ -2,10 +2,10 @@ import { AiFillYoutube, AiOutlineExclamation } from "react-icons/ai";
 import { BsFire } from "react-icons/bs";
 import { CiStreamOn } from "react-icons/ci";
 import { PiMusicNoteLight, PiStudentFill } from "react-icons/pi";
-import { MdOutlineSportsEsports } from "react-icons/md";
+import { MdOutlineSportsEsports, MdSubscriptions } from "react-icons/md";
 import { GoTrophy } from "react-icons/go";
 import { SiMarketo, SiYoutubemusic, SiYoutubestudio } from "react-icons/si";
-import { TbBrandYoutubeKids } from "react-icons/tb";
+import { TbBrandYoutubeKids, TbPlayerPlay } from "react-icons/tb";
 
 export const sidebarItem = [
   {
@@ -19,23 +19,18 @@ export const sidebarItem = [
       {
         path: "/shorts",
         title: "Shorts",
-        icon: BsFire,
+        icon: TbPlayerPlay,
       },
       {
         path: "/subs",
         title: "Subscription",
-        icon: BsFire,
+        icon: MdSubscriptions,
       },
     ],
   },
   {
     title: "Meeting",
     links: [
-      {
-        path: "/main",
-        title: "Main",
-        icon: AiFillYoutube,
-      },
       {
         path: "/trending",
         title: "Trending",
@@ -117,5 +112,52 @@ export const sidebarItem = [
         icon: AiOutlineExclamation,
       },
     ],
+  },
+];
+
+export const Catogories = [
+  {
+    name: "all",
+    title: "All",
+  },
+  {
+    name: "gaming",
+    title: "Gaming",
+  },
+  {
+    name: "music",
+    title: "Music",
+  },
+  {
+    name: "sport",
+    title: "Sport",
+  },
+  {
+    name: "programming",
+    title: "Programming",
+  },
+  {
+    name: "news",
+    title: "news",
+  },
+  {
+    name: "subject",
+    title: "Subject",
+  },
+  {
+    name: "live",
+    title: "Live",
+  },
+  {
+    name: "football",
+    title: "Football",
+  },
+  {
+    name: "art",
+    title: "Art",
+  },
+  {
+    name: "beauty",
+    title: "Beauty",
   },
 ];

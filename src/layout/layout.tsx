@@ -14,7 +14,7 @@ const Layout = ({ children }: LayoutProps) => {
       <Header onToggle={onToggle} />
       <Sidebar toggle={toggle} />
       <Box
-        mt={"11vh"}
+        mt={"10vh"}
         pl={{ base: 0, lg: !toggle ? "250px" : "0" }}
         transition={"all .4s ease"}
         // minH={"90vh"}
