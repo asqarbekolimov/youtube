@@ -47,7 +47,7 @@ const Sidebar = ({ toggle }: SidebarProps) => {
             w={"full"}
             mt={0}
             borderBottom={"1px"}
-            borderBottomColor={useColorModeValue("gray.200", "gray.700")}
+            borderBottomColor={borderColor}
             pb={3}
           >
             <Text mt={5}>{item.title}</Text>
