@@ -27,7 +27,7 @@ const Sidebar = ({ toggle }: SidebarProps) => {
       h={"90vh"}
       pos={"fixed"}
       top={"10vh"}
-      left={{ base: toggle ? 0 : "-100%", lg: toggle ? 0 : "-100%" }}
+      left={{ base: toggle ? 0 : "-100%", lg: !toggle ? 0 : "-100%" }}
       // mt={10}
       bg={bgColor}
       borderRight={"1px"}
