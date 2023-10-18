@@ -18,6 +18,9 @@ const Sidebar = ({ toggle }: SidebarProps) => {
   console.log(toggle);
 
   const router = useRouter();
+  const bgColor = useColorModeValue("gray.50", "gray.900");
+  const borderColor = useColorModeValue("gray.200", "gray.700");
+
   return (
     <Box
       w={{ base: "full", lg: "250px" }}
@@ -26,9 +29,9 @@ const Sidebar = ({ toggle }: SidebarProps) => {
       top={"10vh"}
       left={{ base: toggle ? 0 : "-100%", lg: toggle ? 0 : "-100%" }}
       // mt={10}
-      bg={useColorModeValue("gray.50", "gray.900")}
+      bg={bgColor}
       borderRight={"1px"}
-      borderRightColor={useColorModeValue("gray.200", "gray.700")}
+      borderRightColor={borderColor}
       overflowY={"scroll"}
       css={{
         "&::-webkit-scrollbar": { width: "1px" },

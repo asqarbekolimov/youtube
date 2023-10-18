@@ -17,6 +17,9 @@ import { HeaderProps } from "./header.props";
 
 const Header = ({ onToggle }: HeaderProps) => {
   const { toggleColorMode, colorMode } = useColorMode();
+  const bgColor = useColorModeValue("gray.50", "gray.900");
+  const borderBottomColor = useColorModeValue("gray.200", "gray.700");
+
   return (
     <Box
       zIndex={999}
@@ -27,9 +30,9 @@ const Header = ({ onToggle }: HeaderProps) => {
       left={0}
       right={0}
       px={5}
-      bg={useColorModeValue("gray.50", "gray.900")}
+      bg={bgColor}
       borderBottom={"1px"}
-      borderBottomColor={useColorModeValue("gray.200", "gray.700")}
+      borderBottomColor={borderBottomColor}
     >
       <Flex h={"full"} gap={5} align={"center"} justify={"space-between"}>
         <HStack gap={4}>
