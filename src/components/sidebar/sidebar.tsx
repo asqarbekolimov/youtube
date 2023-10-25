@@ -11,12 +11,17 @@ import {
 import React from 'react';
 import { SidebarProps } from './sidebar.props';
 import { sidebarItem } from '../../config/constants';
-import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { IconType } from 'react-icons/lib';
 
 const Sidebar = ({ toggle }: SidebarProps) => {
   const bgColor = useColorModeValue('gray.50', 'gray.900');
   const borderColor = useColorModeValue('gray.200', 'gray.700');
+  const navigate = useNavigate();
+
+  const navigateLink = (url: string) => {
+    navigate(url);
+  };
 
   return (
     <Box
@@ -50,9 +55,8 @@ const Sidebar = ({ toggle }: SidebarProps) => {
             <Text mt={5}>{item.title}</Text>
             {item.links.map((nav) => {
               const active = window.location.pathname;
-
               return (
-                <NavLink key={nav.path} to={nav.path}>
+                <Box key={nav.path} onClick={() => navigateLink(nav.path)}>
                   <Button
                     colorScheme={'facebook'}
                     variant={nav.path === active ? 'solid' : 'ghost'}
@@ -67,7 +71,7 @@ const Sidebar = ({ toggle }: SidebarProps) => {
                       <Text>{nav.title}</Text>
                     </HStack>
                   </Button>
-                </NavLink>
+                </Box>
               );
             })}
           </Box>
