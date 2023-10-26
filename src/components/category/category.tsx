@@ -1,10 +1,8 @@
 import { Box, Button, HStack, Text } from '@chakra-ui/react';
-import React, { useState } from 'react';
 import { Catogories } from '../../config/constants';
+import { CateogryProps } from './category.props';
 
-const Category = () => {
-  const [selected, setSelected] = useState('all');
-
+const Category = ({ selected, setSelected }: CateogryProps) => {
   const selectedHandler = (item: string) => {
     setSelected(item);
   };

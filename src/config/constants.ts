@@ -117,6 +117,10 @@ export const sidebarItem = [
 
 export const Catogories = [
   {
+    name: 'programming',
+    title: 'Programming',
+  },
+  {
     name: 'all',
     title: 'All',
   },
@@ -131,10 +135,6 @@ export const Catogories = [
   {
     name: 'sport',
     title: 'Sport',
-  },
-  {
-    name: 'programming',
-    title: 'Programming',
   },
   {
     name: 'news',

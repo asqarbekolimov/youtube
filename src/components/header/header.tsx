@@ -25,7 +25,7 @@ const Header = ({ onToggle }: HeaderProps) => {
       zIndex={999}
       w={'full'}
       h={'10vh'}
-      pos={'absolute'}
+      pos={'fixed'}
       top={'0'}
       left={0}
       right={0}
