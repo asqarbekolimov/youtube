@@ -32,7 +32,14 @@ const Main = () => {
   return (
     <Layout>
       <Category selected={selected} setSelected={setSelected} />
-      <Grid templateColumns="repeat(3, 1fr)" mt={10} gap={5}>
+      <Grid
+        templateColumns={{
+          md: 'repeat(2, 1fr)',
+          lg: 'repeat(3, 1fr)',
+        }}
+        mt={10}
+        gap={5}
+      >
         {/* {isLoading && <div>loading...</div>} */}
         {videos?.map((item, idx) => (
           <Skeleton key={idx} isLoaded={!isLoading}>

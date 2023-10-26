@@ -25,6 +25,7 @@ const Sidebar = ({ toggle }: SidebarProps) => {
 
   return (
     <Box
+      zIndex={999}
       w={{ base: 'full', lg: '250px' }}
       h={'90vh'}
       pos={'fixed'}
