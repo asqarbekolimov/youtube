@@ -10,15 +10,25 @@ import {
   useColorMode,
   useColorModeValue,
 } from '@chakra-ui/react';
-import React from 'react';
+import React, { FormEvent, useState } from 'react';
 import { CiMenuBurger, CiSearch } from 'react-icons/ci';
 import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs';
 import { HeaderProps } from './header.props';
+import { useNavigate } from 'react-router-dom';
 
 const Header = ({ onToggle }: HeaderProps) => {
   const { toggleColorMode, colorMode } = useColorMode();
   const bgColor = useColorModeValue('gray.50', 'gray.900');
   const borderBottomColor = useColorModeValue('gray.200', 'gray.700');
+  const [value, setValue] = useState<string>();
+  const navigate = useNavigate();
+
+  const submitHandler = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (value) {
+      navigate(`/search/${value}`);
+    }
+  };
 
   return (
     <Box
@@ -41,12 +51,18 @@ const Header = ({ onToggle }: HeaderProps) => {
           </Button>
           <Icon as={LogoIcon} w={'28'} h={'28'} />
         </HStack>
-        <HStack w={'2xl'}>
-          <Input placeholder="Search" />
-          <Button m={0}>
-            <Icon as={CiSearch} w={'5'} h={'5'} />
-          </Button>
-        </HStack>
+        <form onSubmit={submitHandler}>
+          <HStack w={'2xl'}>
+            <Input
+              placeholder="Search"
+              value={value}
+              onChange={(e) => setValue(e.target.value)}
+            />
+            <Button m={0} type="submit">
+              <Icon as={CiSearch} w={'5'} h={'5'} />
+            </Button>
+          </HStack>
+        </form>
         <IconButton
           aria-label="color-mode"
           onClick={toggleColorMode}
