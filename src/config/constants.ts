@@ -22,7 +22,7 @@ export const sidebarItem = [
         icon: TbPlayerPlay,
       },
       {
-        path: '/subs',
+        path: '',
         title: 'Subscription',
         icon: MdSubscriptions,
       },
@@ -32,37 +32,37 @@ export const sidebarItem = [
     title: 'Meeting',
     links: [
       {
-        path: '/trending',
+        path: '',
         title: 'Trending',
         icon: BsFire,
       },
       {
-        path: '/music',
+        path: '',
         title: 'Music',
         icon: PiMusicNoteLight,
       },
       {
-        path: '/lie',
+        path: '',
         title: 'Live',
         icon: CiStreamOn,
       },
       {
-        path: '/sport',
+        path: '',
         title: 'Sport',
         icon: GoTrophy,
       },
       {
-        path: '/gaming',
+        path: '',
         title: 'Gaming',
         icon: MdOutlineSportsEsports,
       },
       {
-        path: '/edu',
+        path: '',
         title: 'Education',
         icon: PiStudentFill,
       },
       {
-        path: '/beauty',
+        path: '',
         title: 'Beauty',
         icon: SiMarketo,
       },
@@ -72,17 +72,17 @@ export const sidebarItem = [
     title: 'YouTube Services',
     links: [
       {
-        path: '/gaming',
+        path: '',
         title: 'YouTube Studio',
         icon: SiYoutubestudio,
       },
       {
-        path: '/edu',
+        path: '',
         title: 'YouTube Music',
         icon: SiYoutubemusic,
       },
       {
-        path: '/beauty',
+        path: '',
         title: 'YouTube Kids',
         icon: TbBrandYoutubeKids,
       },
@@ -92,22 +92,22 @@ export const sidebarItem = [
     title: '',
     links: [
       {
-        path: '/settings',
+        path: '',
         title: 'Settings',
         icon: SiYoutubestudio,
       },
       {
-        path: '/report',
+        path: '',
         title: 'Report',
         icon: SiYoutubemusic,
       },
       {
-        path: '/beauty',
+        path: '',
         title: 'Help',
         icon: '',
       },
       {
-        path: '/faq',
+        path: '',
         title: 'FAQ',
         icon: AiOutlineExclamation,
       },

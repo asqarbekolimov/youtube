@@ -44,7 +44,11 @@ const Search = () => {
           <Skeleton key={idx} isLoaded={!isLoading}>
             <GridItem key={idx}>
               {item.id.videoId && (
-                <VideoCard video={item.snippet} isLoading={!isLoading} />
+                <VideoCard
+                  videoId={item.id.videoId}
+                  video={item.snippet}
+                  isLoading={!isLoading}
+                />
               )}
               {item.id.channelId && (
                 <ChannelCard channel={item.snippet} isLoading={!isLoading} />

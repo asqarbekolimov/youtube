@@ -54,10 +54,10 @@ const Sidebar = ({ toggle }: SidebarProps) => {
             pb={3}
           >
             <Text mt={5}>{item.title}</Text>
-            {item.links.map((nav) => {
+            {item.links.map((nav, idx) => {
               const active = window.location.pathname;
               return (
-                <Box key={nav.path} onClick={() => navigateLink(nav.path)}>
+                <Box key={idx} onClick={() => navigateLink(nav.path)}>
                   <Button
                     colorScheme={'facebook'}
                     variant={nav.path === active ? 'solid' : 'ghost'}

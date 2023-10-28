@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Layout from '../layout/layout';
-import { Category } from '../components';
+import { Category, ChannelCard } from '../components';
 import { ApiService } from '../service/api.service';
 import { VideoType } from '../interfaces/video.interface';
 import VideoCard from '../components/card/card';
@@ -44,10 +44,15 @@ const Main = () => {
         {videos?.map((item, idx) => (
           <Skeleton key={idx} isLoaded={!isLoading}>
             <GridItem key={idx}>
-              {isLoading ? (
-                <VideoCard video={item.snippet} isLoading={isLoading} />
-              ) : (
-                <VideoCard video={item.snippet} isLoading={!isLoading} />
+              {item.id.videoId && (
+                <VideoCard
+                  id={item.id.videoId}
+                  video={item.snippet}
+                  isLoading={!isLoading}
+                />
+              )}
+              {item.id.channelId && (
+                <ChannelCard channel={item.snippet} isLoading={!isLoading} />
               )}
             </GridItem>
           </Skeleton>

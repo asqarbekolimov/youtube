@@ -14,7 +14,7 @@ import React, { FormEvent, useState } from 'react';
 import { CiMenuBurger, CiSearch } from 'react-icons/ci';
 import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs';
 import { HeaderProps } from './header.props';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Header = ({ onToggle }: HeaderProps) => {
   const { toggleColorMode, colorMode } = useColorMode();
@@ -49,7 +49,9 @@ const Header = ({ onToggle }: HeaderProps) => {
           <Button borderRadius={'full'} variant={'ghost'} onClick={onToggle}>
             <Icon as={CiMenuBurger} w={'20px'} h={'20px'} />
           </Button>
-          <Icon as={LogoIcon} w={'28'} h={'28'} />
+          <Link to={'/'}>
+            <Icon as={LogoIcon} w={'28'} h={'28'} />
+          </Link>
         </HStack>
         <form onSubmit={submitHandler}>
           <HStack w={'2xl'}>

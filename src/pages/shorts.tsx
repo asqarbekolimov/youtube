@@ -38,7 +38,11 @@ const Shorts = () => {
         {videos?.map((item, idx) => (
           <Skeleton key={idx} isLoaded={!isLoading}>
             <GridItem key={idx}>
-              <VideoCard video={item.snippet} isLoading={!isLoading} />
+              <VideoCard
+                videoId={item.id.videoId}
+                video={item.snippet}
+                isLoading={!isLoading}
+              />
             </GridItem>
           </Skeleton>
         ))}

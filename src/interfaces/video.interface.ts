@@ -10,6 +10,32 @@ export interface Id {
   channelId?: string;
 }
 
+export interface DetailVideo {
+  kind: string;
+  items: VideoItem[];
+  pageInfo: PageInfo;
+}
+
+export interface VideoItem {
+  kind: string;
+  id: string;
+  snippet: Snippet;
+  statistics: Statistics;
+}
+export interface Statistics {
+  viewCount: string;
+  likeCount: string;
+  favoriteCount: string;
+  commentCount: string;
+}
+export interface PageInfo {
+  totalResults: number;
+  resultsPerPage: number;
+}
+export interface Localized {
+  title: string;
+  description: string;
+}
 export interface Snippet {
   publishedAt: string;
   channelId: string;
@@ -19,6 +45,7 @@ export interface Snippet {
   channelTitle: string;
   liveBroadcastContent: string;
   publishTime: string;
+  localized?: Localized;
 }
 
 export interface Thumbnails {
